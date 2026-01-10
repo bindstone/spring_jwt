@@ -25,7 +25,7 @@ client_id=CONTINENTAL-CLIENT&username=user&password=password&grant_type=password
 POST http://127.0.0.1:8888/realms/CONTINENTAL/protocol/openid-connect/token
 Content-Type: application/x-www-form-urlencoded
 
-client_id=CONTINENTAL-CLIENT&username=user&password=password&grant_type=password
+client_id=CONTINENTAL-CLIENT&username=admin&password=password&grant_type=password
 
 > {%
     client.global.set("token", response.body.access_token);

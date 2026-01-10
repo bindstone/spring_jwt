@@ -1,18 +1,25 @@
-## See: http-client.env.json
-{%
-    request.variables.set("token", "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJhYTczODhiZS1hOWYwLTQ4MWItOGFhNS0zNjk5ZWUyOGE3MDgifQ.eyJleHAiOjE3Njc5OTA1MTcsImlhdCI6MTc2Nzk4ODcxNywianRpIjoiYzljMjIxMWYtNWZhOS00N2E5LWE1YzAtMzk0YjVhNTA1NDIwIiwiaXNzIjoiaHR0cDovLzEyNy4wLjAuMTo4ODg4L3JlYWxtcy9sZWFybi1zZWMtcmVhbG0iLCJhdWQiOiJodHRwOi8vMTI3LjAuMC4xOjg4ODgvcmVhbG1zL2xlYXJuLXNlYy1yZWFsbSIsInN1YiI6InN0dWRlbnQiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoibGVhcm4tcnVzdC1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiNTI0N2U0YzgtZTg1OC00OWE0LTk2OGUtY2E4OWViOTViYThhIiwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwic2lkIjoiNTI0N2U0YzgtZTg1OC00OWE0LTk2OGUtY2E4OWViOTViYThhIn0.Tvpd_sPyIV-UaP4rfgLBhrq9_gFBlR3YRmh9Wub5RmE")
-%}
-
 ### PUBLIC
+## See: http-client.env.json
+< {%
+request.variables.set("token", client.global.get("token"))
+%}
 GET http://127.0.0.1:8080/public
 Accept: application/json
 
 ### PRIVATE
+## See: http-client.env.json
+< {%
+    request.variables.set("token", client.global.get("token"))
+%}
 GET http://127.0.0.1:8080/private
 Authorization: Bearer {{token}}
 Accept: application/json
 
 ### ADMIN
+## See: http-client.env.json
+< {%
+    request.variables.set("token", client.global.get("token"))
+%}
 GET http://127.0.0.1:8080/admin
 Authorization: Bearer {{token}}
 Accept: application/json

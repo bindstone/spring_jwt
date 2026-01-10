@@ -16,3 +16,10 @@
 ![create_user_1.png](images/create_user_1.png)
 ![create_user_2.png](images/create_user_2.png)
 ![create_user_3.png](images/create_user_3.png)
+
+- Export Config + User [Link](https://www.keycloak.org/server/importExport)
+
+```Shell
+cd /opt/keycloak/bin
+./kc.sh export --file /tmp/export.json --realm CONTINENTAL
+```
